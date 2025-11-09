@@ -11,7 +11,6 @@
 }
 
 .main h1 {
-  /* font-family: 'Meddon', cursive; */
   font-size: 4rem;
   display: inline-block;
   width: 110%;
@@ -153,7 +152,7 @@ div.card {
     content: '';
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
     z-index: 1;
     border-radius: 10px;
   }
