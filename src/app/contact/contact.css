@@ -65,7 +65,7 @@ button {
     flex-direction: row;
     justify-content: space-evenly;
     margin: 1rem 0;
-    height: 70vh;
+    height: 130vh;
   }
 
   .map-container {
