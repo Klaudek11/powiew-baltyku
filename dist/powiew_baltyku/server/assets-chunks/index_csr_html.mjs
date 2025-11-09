@@ -35,6 +35,6 @@ export default `<!DOCTYPE html>
   </script>
   <body ngcm="">
     <app-root> </app-root>
-  <link rel="modulepreload" href="chunk-ISOAL3NJ.js"><script src="main-JZOF3DBL.js" type="module"></script></body>
+  <link rel="modulepreload" href="chunk-ISOAL3NJ.js"><script src="main-MZWQ22DS.js" type="module"></script></body>
 </html>
 `;

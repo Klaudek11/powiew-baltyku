@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { ScrollAnimDirective } from '../directives/scroll-anim';
 
 @Component({
   selector: 'app-main',
-  imports: [MatCardModule, MatButtonModule, ScrollAnimDirective],
+  imports: [MatCardModule, MatButtonModule],
   templateUrl: './main.html',
   styleUrl: './main.css',
 })

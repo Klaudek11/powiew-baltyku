@@ -11,7 +11,7 @@
   justify-content: center;
   flex-direction: column;
   margin: 2rem 0;
-  height: 100vh;
+  height: 120vh;
 }
 
 .map-container {
@@ -36,7 +36,7 @@
 .adres h3,
 span,
 .kontakt h3 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin: 0.5rem;
   line-height: 1.2;
   text-align: center;
@@ -45,8 +45,8 @@ span,
 .adres p,
 span,
 .kontakt p {
-  font-size: 1.5rem;
-  line-height: 1.6;
+  font-size: 1.4rem;
+  line-height: 1.5;
   margin: 0;
 }
 
@@ -65,7 +65,7 @@ button {
     flex-direction: row;
     justify-content: space-evenly;
     margin: 1rem 0;
-    height: 130vh;
+    height: 70vh;
   }
 
   .map-container {
