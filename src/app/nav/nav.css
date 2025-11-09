@@ -1,0 +1,147 @@
+html {
+  scroll-behavior: smooth;
+}
+.site-nav {
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  top: 0;
+  background-color: var(--primary-color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 6vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  position: relative;
+}
+
+.logo-img {
+  height: 100%;
+  width: 100%;
+}
+
+.nav-list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-list a {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  transition: background-color 150ms, color 150ms, transform 150ms;
+  font-weight: 600;
+}
+.nav-list a:hover {
+  background-color: var(--secondary-color);
+  outline: none;
+}
+.nav-list a.active {
+  background-color: white;
+  color: black;
+}
+
+.hamburger {
+  display: none;
+  background: transparent;
+  border: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.hamburger-box {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 28px;
+  height: 2px;
+  background-color: white;
+  display: block;
+  position: absolute;
+  transition: transform 200ms ease, opacity 200ms ease;
+}
+.hamburger-inner {
+  top: 9px;
+  left: 0;
+}
+.hamburger-inner::before {
+  content: '';
+  top: -8px;
+  left: 0;
+}
+.hamburger-inner::after {
+  content: '';
+  top: 8px;
+  left: 0;
+}
+
+.mobile-menu {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 250ms ease;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+.mobile-menu.open {
+  display: block;
+  max-height: 400px;
+}
+.mobile-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 1rem;
+}
+.mobile-menu a {
+  display: block;
+  padding: 0.75rem 0.5rem;
+  text-decoration: none;
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .nav-list {
+    display: none;
+  }
+  .hamburger {
+    display: inline-block;
+  }
+  .nav-inner {
+    padding-right: 0.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .nav-inner {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .logo {
+    height: 30px;
+    width: 30px;
+  }
+}

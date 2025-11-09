@@ -1,0 +1,58 @@
+<nav class="site-nav" role="navigation" aria-label="Główne menu">
+  <div class="nav-inner">
+    <div
+      class="logo"
+      (click)="goTo('home', $event)"
+      aria-label="Przejdź do początku strony"
+    >
+      <img src="/powiew_baltyku_logo.png" alt="logo" class="logo-img" />
+    </div>
+
+    <ul
+      class="nav-list"
+      role="menubar"
+      aria-hidden="{{ isMenuOpen ? 'false' : 'false' }}"
+    >
+      <li *ngFor="let item of navItems" role="none">
+        <a
+          role="menuitem"
+          href="#{{ item.id }}"
+          (click)="goTo(item.id, $event)"
+          [class.active]="activeId === item.id"
+          >{{ item.label }}</a
+        >
+      </li>
+    </ul>
+
+    <button
+      class="hamburger"
+      aria-label="Menu"
+      aria-expanded="{{ isMenuOpen }}"
+      (click)="toggleMenu()"
+    >
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+  </div>
+
+  <div
+    class="mobile-menu"
+    [class.open]="isMenuOpen"
+    role="menu"
+    aria-hidden="{{ !isMenuOpen }}"
+  >
+    <ul>
+      <li *ngFor="let item of navItems">
+        <a
+          href="#{{ item.id }}"
+          (click)="goTo(item.id, $event)"
+          [class.active]="activeId === item.id"
+          role="menuitem"
+        >
+          {{ item.label }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

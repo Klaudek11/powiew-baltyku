@@ -1,0 +1,21 @@
+<div class="carousel-container" id="zdjecia">
+  <div class="carousel-image-wrapper">
+    <img [src]="images[currentIndex]" alt="carousel image" class="carousel-image">
+    <button class="carousel-btn left" (click)="prev()">&#10094;</button>
+    <button class="carousel-btn right" (click)="next()">&#10095;</button>
+  </div>
+
+  <div class="carousel-thumbnails-wrapper">
+    <button class="thumb-btn" (click)="prevThumbs()" [disabled]="thumbnailStart === 0">&#10094;</button>
+    <div class="carousel-thumbnails">
+      <img
+        *ngFor="let img of visibleImages; let i = index"
+        [src]="img"
+        [class.active]="i + thumbnailStart === currentIndex"
+        (click)="goTo(i + thumbnailStart)"
+        alt="thumbnail"
+      >
+    </div>
+    <button class="thumb-btn" (click)="nextThumbs()" [disabled]="thumbnailStart + visibleThumbnails >= images.length">&#10095;</button>
+  </div>
+</div>

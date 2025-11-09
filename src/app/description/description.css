@@ -1,0 +1,17 @@
+.desc {
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 2rem;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  line-height: 1.2;
+  font-family: 'Meddon', cursive;
+}
+
+.desc p {
+  text-align: center;
+}

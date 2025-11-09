@@ -1,0 +1,75 @@
+:root {
+  --primary-color: #182655;
+  --secondary-color: #5386bd;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Montserrat;
+  overflow-x: hidden;
+}
+
+.scroll-anim {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-anim.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.from-left {
+  transform: translateX(-100px);
+}
+
+.from-right {
+  transform: translateX(100px);
+}
+
+.typewriter {
+  display: inline-block;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-anim {
+    transform: translateX(40px);
+  }
+
+  .from-left {
+    transform: translateX(-40px);
+  }
+
+  .from-right {
+    transform: translateX(40px);
+  }
+
+  .material-symbols-outlined {
+    font-size: 7rem;
+  }
+
+  .main p.display {
+    display: inline;
+    font-size: 1.2rem;
+  }
+}

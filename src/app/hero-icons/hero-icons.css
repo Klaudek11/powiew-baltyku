@@ -1,0 +1,183 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  margin: 3rem 0;
+  font-size: 1rem;
+}
+
+.main h1 {
+  /* font-family: 'Meddon', cursive; */
+  font-size: 4rem;
+  display: inline-block;
+  width: 110%;
+  height: 110%;
+  line-height: 2;
+  padding: auto;
+  color: var(--primary-color);
+}
+
+.main p {
+  display: block;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+#wrapper,
+#domki {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1600px;
+  gap: 2rem;
+  min-height: 45vh;
+  width: 100%;
+}
+
+.main-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.main-card .desc {
+  width: 50%;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.wrapper > div > div,
+#domki > div > div {
+  position: relative;
+  flex: 1 1 400px;
+  width: 40vw;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+div.card {
+  background-size: cover;
+}
+
+.count {
+  background: url(../../../public/image2.jpeg);
+}
+
+.space {
+  background: url(../../../public/8.jpeg);
+}
+
+.toilet {
+  background: url(../../../public/1.jpeg);
+}
+
+.material-symbols-outlined {
+  font-size: 25rem;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.main p.display {
+  display: none;
+}
+
+.wrapper > div > div:hover::before,
+#domki > div > div:hover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+}
+
+.wrapper > div > div *,
+#domki > div > div * {
+  position: relative;
+  z-index: 2;
+}
+
+.wrapper > div > div:hover,
+#domki > div > div:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper > div > div:hover .material-symbols-outlined,
+#domki > div > div:hover .material-symbols-outlined {
+  display: none;
+}
+
+.wrapper > div > div:hover p.display,
+#domki > div > div:hover p.display {
+  display: block;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .wrapper > div > div,
+  #domki > div > div {
+    width: 75vw;
+    overflow: hidden;
+  }
+
+  #domki {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .wrapper > div > div::before,
+  #domki > div > div::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    border-radius: 10px;
+  }
+
+  .main-card {
+    flex-direction: column;
+  }
+
+  .material-symbols-outlined {
+    font-size: 7rem;
+    color: white;
+    transition: transform 0.3s;
+  }
+
+  .main p.desc {
+    display: none;
+  }
+
+  .main p.display {
+    display: inline;
+    font-size: 1.2rem;
+  }
+
+  .main h1 {
+    font-size: 2rem;
+  }
+}
